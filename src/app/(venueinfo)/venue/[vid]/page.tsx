@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-export default async function VenueDetailPage({ params }: { params: Promise<{ vid: string }> }) {
+interface Props {
+  params: Promise<{ vid: string }>;
+}
+
+export default async function VenueDetailPage({ params }: Props ) {
     
     const { vid } = await params;
 
