@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-export default async function venueDetailPage({params}:{params: {vid:string}}){
+export default async function venueDetailPage({params}:{params: Promise<{vid:string}>}){
     /**
      * Mock Data
      */
